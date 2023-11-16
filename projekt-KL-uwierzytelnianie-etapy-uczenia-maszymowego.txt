@@ -1,0 +1,21 @@
+Etapy uczenia maszynowego
+
+1. Zdefiniowanie problem
+
+2. Zebranie danych wejściowych [i jesli tomożliwe danych wyjśiowych- próbki do porównania]
+
+3. Uporządkowanie danych
+
+4. Jeśli tomożliwe podział na zbiory treningowy [walodyjacy] i testowy
+
+5. Wybór algorytmu
+
+6. Ustawienie wynranych hiperparametrów dla wybranego algorytmu
+
+7. Okreslenie miary sukcesu (funkcja straty)
+
+8. Trening
+
+9. Ewaluacja otrzymanego modelu
+
+10. Optymalizacja hiperparametrów

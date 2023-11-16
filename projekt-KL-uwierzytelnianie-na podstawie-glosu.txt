@@ -1,0 +1,11 @@
+
+
+
+System uwierzytelniania na podstawie głosu działa w następujący sposób:
+
+    Użytkownik rejestruje swój głos w systemie.
+    Podczas uwierzytelniania użytkownik wypowiada frazę lub zestaw słów.
+    System porównuje nagranie głosu użytkownika z zarejestrowanym wzorem głosowym.
+    Jeśli nagranie głosu użytkownika jest zgodne z zarejestrowanym wzorem głosowym, użytkownik jest uwierzytelniony.
+
+
