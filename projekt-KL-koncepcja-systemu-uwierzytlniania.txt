@@ -1,0 +1,28 @@
+Koncepcja systemu uwierytelniania z pomoca barwy glosu
+
+Zakres czynnosci:
+
+1. budowanie systemu uwierzytelniania przez login i haslo
+    a) baza danych
+    b) modul uwierzytelniania
+
+2. Budowanie Zestawu fraz zdan do odcytania dla uzywkownikana podstawie ktorych bedzie uwierzytelnianie
+    a) zapis zdan w pliku tekstowym
+    b) modul odczytujacy z pliku tekstowego
+
+3. Budowanie ksiazki kodowej (do zapisywania nagranych fraz) i modulu zapisywania nagran
+
+4, Weryfikacja barwy glosu
+    a) Uzytkownik podczas rejesrtacji wypowiada podana (wylosowana) komende kilka razy,
+    z czego jedno z nagran trafia do puli nagrac tworzacych kssiazkdowa a pozostale do nauczenia sprzezonych ukrytych modeli Markowa.
+
+    b)  dla kazdego uzytkownika budownay jest oddzielny modeli
+
+    c) po nauczeniu, podczas normalnej pracy z sysemem kazdorazowo przy probie dostepu, nastepuje weyfikacja tozsamosci zaiteresownego uzytkownika
+
+    d) zwycieski model wskazuje na poprawna (badz nie) weryfikacje
+
+5. Modul porownawczy i uwierzytelniajacy (weryfikacji)
+W celu zwiększenia wiarygodności można wymusić próbę podwójnego logowania i dla obu zgodności przydzielać dopiero status poprawnej weryfikacji.
+
+    (Zrodlo: Wyklad nr 5)
