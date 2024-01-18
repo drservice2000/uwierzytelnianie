@@ -1,0 +1,81 @@
+<!-- Ctl + Shift + F10-->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login and Registration</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <!-- Login form fields -->
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Hasło:</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password" required>
+                    </div>
+                    <!-- Voice sample recording -->
+                    <div class="mb-3">
+                        <label for="voiceSample" class="form-label">Nagraj swój głos</label>
+                        <button type="button" class="btn btn-primary" onclick="recordVoice()">Nagraj</button>
+                        <audio id="voiceSample" controls></audio>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Logowanie</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Register</h2>
+                <form action="/register" method="post">
+                    <!-- Registration form fields -->
+                    <div class="mb-3">
+                        <label for="registerFirstName" class="form-label">Imie:</label>
+                        <input type="text" class="form-control" id="registerFirstName" name="firstname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerLastName" class="form-label">Nazwisko:</label>
+                        <input type="text" class="form-control" id="registerLastName" name="lastname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Hasło:</label>
+                        <input type="password" class="form-control" id="registerPassword" name="password" required>
+                    </div>
+                    <!-- Voice sample recording -->
+                    <div class="mb-3">
+                        <label for="registerVoiceSample" class="form-label">Nagraj swój głos</label>
+                        <button type="button" class="btn btn-primary" onclick="recordVoice('registerVoiceSample')">Nagraj</button>
+                        <audio id="registerVoiceSample" controls></audio>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Rejestracja</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to record voice sample
+        function recordVoice(targetElementId) {
+            // Implement voice recording logic using Web Speech API or other libraries
+            // Set the recorded audio source to the specified target element
+            // Example using Web Speech API:
+            const recognition = new webkitSpeechRecognition();
+            recognition.onresult = function (event) {
+                const voiceSample = event.results[0][0].transcript;
+                document.getElementById(targetElementId).src = 'data:audio/wav;base64,' + btoa(voiceSample);
+            };
+            recognition.start();
+        }
+    </script>
+</body>
+</html>
